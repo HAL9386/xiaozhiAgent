@@ -30,12 +30,12 @@
     <java.version>17</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <knife4j.version>4.3.0</knife4j.version>
-    <langchain4j.version>1.0.0-beta3</langchain4j.version>
+    <langchain4j.version>1.0.0-beta4</langchain4j.version>
   </properties>
   <dependencies>
     <dependency>
       <groupId>dev.langchain4j</groupId>
-      <artifactId>langchain4j-open-ai</artifactId>
+      <artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
       <version>${langchain4j.version}</version>
     </dependency>
     <dependency>
