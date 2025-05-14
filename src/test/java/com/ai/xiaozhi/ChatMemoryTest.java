@@ -2,6 +2,7 @@ package com.ai.xiaozhi;
 
 import com.ai.xiaozhi.assistant.Assistant;
 import com.ai.xiaozhi.assistant.MemoryChatAssistant;
+import com.ai.xiaozhi.assistant.SeparateChatAssistant;
 import dev.langchain4j.community.model.dashscope.QwenChatModel;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.service.AiServices;
@@ -35,5 +36,17 @@ public class ChatMemoryTest {
     System.out.println(answer1);
     String answer2 = memoryChatAssistant.chat("我是谁");
     System.out.println(answer2);
+  }
+
+  @Autowired
+  private SeparateChatAssistant separateChatAssistant;
+  @Test
+  public void testSeparateChatAssistant() {
+    String answer1 = separateChatAssistant.chat(1, "我是ElePhantom");
+    System.out.println(answer1);
+    String answer2 = separateChatAssistant.chat(1, "我是谁");
+    System.out.println(answer2);
+    String answer3 = separateChatAssistant.chat(2, "我是谁");
+    System.out.println(answer3);
   }
 }
