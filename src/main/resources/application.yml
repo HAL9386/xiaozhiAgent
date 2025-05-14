@@ -17,3 +17,13 @@ langchain4j:
       model-name: qwen3:0.6b
       temperature: 0.2
       timeout: PT60S
+      log-requests: true
+      log-responses: true
+  community:
+    dashscope:
+      chat-model:
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: qwen-max
+logging:
+  level:
+    root: info

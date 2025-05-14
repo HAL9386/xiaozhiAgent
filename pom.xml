@@ -33,6 +33,11 @@
     <langchain4j.version>1.0.0-beta4</langchain4j.version>
   </properties>
   <dependencies>
+    <!-- 接入阿里云百炼平台 -->
+    <dependency>
+      <groupId>dev.langchain4j</groupId>
+      <artifactId>langchain4j-community-dashscope-spring-boot-starter</artifactId>
+    </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
@@ -63,6 +68,19 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <!--引入百炼依赖管理清单-->
+      <dependency>
+        <groupId>dev.langchain4j</groupId>
+        <artifactId>langchain4j-community-bom</artifactId>
+        <version>${langchain4j.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <plugins>
