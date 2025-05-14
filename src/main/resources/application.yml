@@ -11,3 +11,9 @@ langchain4j:
       model-name: gpt-4o-mini
       log-requests: true
       log-responses: true
+  ollama:
+    chat-model:
+      base-url: http://localhost:11434
+      model-name: qwen3:0.6b
+      temperature: 0.2
+      timeout: PT60S
