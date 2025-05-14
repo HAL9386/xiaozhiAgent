@@ -33,6 +33,12 @@
     <langchain4j.version>1.0.0-beta4</langchain4j.version>
   </properties>
   <dependencies>
+    <!--langchain4j高级功能-->
+    <dependency>
+      <groupId>dev.langchain4j</groupId>
+      <artifactId>langchain4j-spring-boot-starter</artifactId>
+      <version>1.0.0-beta5</version>
+    </dependency>
     <!-- 接入阿里云百炼平台 -->
     <dependency>
       <groupId>dev.langchain4j</groupId>
@@ -71,6 +77,14 @@
 
   <dependencyManagement>
     <dependencies>
+      <!--引入SpringBoot依赖管理清单-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>3.4.5</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <!--引入百炼依赖管理清单-->
       <dependency>
         <groupId>dev.langchain4j</groupId>
