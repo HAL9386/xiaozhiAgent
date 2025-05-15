@@ -12,7 +12,7 @@ public class ToolsTest {
 
   @Test
   public void testCalculatorTools() {
-    String answer = separateChatAssistant.chat(2, "1加2等于多少？475695037565的平方根是多少？");
+    String answer = separateChatAssistant.chat(5, "1加2等于多少？475695037565的平方根是多少？");
     System.out.println(answer);
   }
 }
