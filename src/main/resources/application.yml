@@ -3,6 +3,9 @@ spring:
     name: xiaozhi
   profiles:
     include: secret
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/chat_memory_db
 langchain4j:
   open-ai:
     chat-model:

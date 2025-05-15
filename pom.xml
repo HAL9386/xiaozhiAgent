@@ -33,6 +33,16 @@
     <langchain4j.version>1.0.0-beta4</langchain4j.version>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.36</version>
+    </dependency>
+    <!-- Spring Boot Starter Data MongoDB -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-mongodb</artifactId>
+    </dependency>
     <!--langchain4j高级功能-->
     <dependency>
       <groupId>dev.langchain4j</groupId>
