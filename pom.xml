@@ -31,8 +31,19 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <knife4j.version>4.3.0</knife4j.version>
     <langchain4j.version>1.0.0-beta4</langchain4j.version>
+    <mybatis-plus.version>3.5.11</mybatis-plus.version>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+      <version>${mybatis-plus.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <scope>runtime</scope>
+    </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
