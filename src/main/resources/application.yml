@@ -32,6 +32,9 @@ langchain4j:
       chat-model:
         api-key: ${DASH_SCOPE_API_KEY}
         model-name: qwen-max
+      embedding-model:
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: text-embedding-v3
 logging:
   level:
     root: info
