@@ -14,10 +14,10 @@ public class AppointmentTools {
   @Autowired
   private AppointmentService appointmentService;
 
-  @Tool(name="预约挂号", value = "根据参数，先执行工具方法queryDepartment查询科室是否可预约，" +
-    "先给用户回答是否可预约，同时让用户提供所有必要的预约信息（姓名、科室名称、日期、时间（上午或下午）、医生名称可选），" +
-    "如果信息不完善不能预约，提示用户补充信息，" +
-    "补充完后，再提示用户确认，确认后再进行预约。")
+  @Tool(name="预约挂号", value = "让用户提供所有必要的预约信息（姓名、科室名称、日期、时间（上午或下午）、医生名称可选），" +
+    "如果信息不完善不能预约，提示用户补充信息，如果用户没有提供具体的医生姓名，请从向量存储中找到一位医生。" +
+    "根据参数，先执行工具方法queryDepartment查询科室是否可预约，并告知用户。" +
+    "然后提示用户确认预约信息，确认后再进行预约。")
   public String bookAppointment(Appointment appointment) {
     log.info("预约挂号：{}", appointment);
     Appointment appointmentRecord = appointmentService.getOne(appointment);

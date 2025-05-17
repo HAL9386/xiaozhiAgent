@@ -12,7 +12,8 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
   chatMemoryProvider = "chatMemoryProviderXiaozhi",
   tools = {
     "appointmentTools",
-  }
+  },
+  contentRetriever = "contentRetrieverXiaozhi"
 )
 public interface XiaozhiAgent {
   @SystemMessage(fromResource = "XiaozhiSystemPrompt.txt")
