@@ -13,7 +13,7 @@ import dev.langchain4j.service.spring.AiServiceWiringMode;
   tools = {
     "appointmentTools",
   },
-  contentRetriever = "contentRetrieverXiaozhi"
+  contentRetriever = "contentRetrieverXiaozhiPinecone"
 )
 public interface XiaozhiAgent {
   @SystemMessage(fromResource = "XiaozhiSystemPrompt.txt")

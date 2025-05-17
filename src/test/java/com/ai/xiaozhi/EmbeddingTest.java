@@ -1,15 +1,16 @@
 package com.ai.xiaozhi;
 
+import dev.langchain4j.data.document.Document;
+import dev.langchain4j.data.document.loader.FileSystemDocumentLoader;
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.embedding.EmbeddingModel;
-import dev.langchain4j.store.embedding.EmbeddingMatch;
-import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
-import dev.langchain4j.store.embedding.EmbeddingSearchResult;
-import dev.langchain4j.store.embedding.EmbeddingStore;
+import dev.langchain4j.store.embedding.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 @SpringBootTest
 public class EmbeddingTest {
@@ -57,4 +58,15 @@ public class EmbeddingTest {
     //返回文本结果
     System.out.println(embeddingMatch.embedded().text());
   }
+
+  @Test
+  public void testUploadKnowledgeLib() {
+    List<Document> documents = FileSystemDocumentLoader.loadDocuments("D:/documnt/uhgvgu/knowledge");
+    EmbeddingStoreIngestor.builder()
+      .embeddingStore(embeddingStore)
+      .embeddingModel(embeddingModel)
+      .build()
+      .ingest(documents);
+  }
+
 }
