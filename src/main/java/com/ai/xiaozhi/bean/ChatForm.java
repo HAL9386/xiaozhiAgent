@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ChatForm {
   private Long memoryId;
-  private String userMessage;
+  private String message;
 }
